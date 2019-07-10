@@ -9,4 +9,7 @@ RUN node -v
 COPY package.json .
 COPY package-lock.json .
 RUN npm install
-RUN 
+#Bundle resource
+COPY . ./
+EXPOSE 3000
+CMD ["npm", "run", "android"]

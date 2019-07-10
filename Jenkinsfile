@@ -11,6 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'npm install'
+                bat 'npm i expo'
                 dir("C:/Users/User/AppData/Local/Android/Sdk/tools/bin") {
                     bat 'echo no | avdmanager create avd -n test -k system-images;android-29;google_apis;x86'
                 }
